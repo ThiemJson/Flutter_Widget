@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
-class BoxDecorationS extends StatelessWidget {
+class ListViews extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Box decoration',
+      title: 'List Views',
       theme: ThemeData(
         primaryColor: Color(0xFFC41A3B),
         primaryColorLight: Color(0xFFFBE0E6),
@@ -22,23 +23,27 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String appbarTitle = 'BoxDecoration';
+  String appbarTitle = 'List views';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(appbarTitle), centerTitle: true,),
-      body: Center(
-        child: Container(
-          height: 300,
-          width: 300,
-          decoration: BoxDecoration(
-            color: Colors.orangeAccent,
-            shape: BoxShape.circle,
-            border: Border.all(color: Colors.redAccent, width: 5)
-          ),
-        ),
+      body: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: 50,
+        itemBuilder: (context, index){
+          return Padding(
+            padding: const EdgeInsets.all(6.0),
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12)
+              ),
+              child: Text('Item ${index}', style: TextStyle(fontSize: 20,),),
+            ),
+          );
+        },
       ),
     );
   }
 }
-
