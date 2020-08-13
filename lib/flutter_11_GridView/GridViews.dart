@@ -28,7 +28,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
   TabController _tabController ;
   @override
   void initState() {
-    _tabController = TabController(length: 5, vsync: this);
+    _tabController = TabController(length: 2, vsync: this);
     super.initState();
   }
   @override
