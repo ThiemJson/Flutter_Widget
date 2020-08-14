@@ -13,4 +13,6 @@ import './flutter_13_BackdropFilter/BackdropFilter.dart';
 import './flutter_16_FittedBox/FittedBoxs.dart';
 import './flutter_17_CustomCliped/CustomClipeds.dart';
 import './flutter_18_Stepped_expaned_List_TextFormField/Stepepd.dart';
-void main()=>runApp(SteppedS());
+import './flutter_19_FractionalTranslation/FractionalTranslationS.dart';
+import './flutter_20_Alertdialog/AlertDialog.dart';
+void main()=>runApp(AlertDialogS());
