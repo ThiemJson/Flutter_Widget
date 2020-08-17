@@ -29,26 +29,32 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(appbarTitle), centerTitle: true,),
-      body: RefreshIndicator(
-        //strokeWidth: 1,
-        backgroundColor: Colors.blueAccent,
-        onRefresh: refreshList,
-        child: ListView.builder(
-          scrollDirection: Axis.vertical,
-          itemCount: 50,
-          itemBuilder: (context, index){
-            return Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12)
+      body: SingleChildScrollView(
+        child: RefreshIndicator(
+          //strokeWidth: 1,
+          onRefresh: refreshList,
+         /* child: ListView.builder(
+            scrollDirection: Axis.vertical,
+            itemCount: 50,
+            itemBuilder: (context, index){
+              return Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12)
+                  ),
+                  child: Text('Item ${index}', style: TextStyle(fontSize: 20,),),
                 ),
-                child: Text('Item ${index}', style: TextStyle(fontSize: 20,),),
-              ),
-            );
-          },
-        ),
+              );
+            },
+          ),*/
+         child: Container(
+           height: 3000,
+           width: double.infinity,
+           color: Colors.red,
+         ),
 
+        ),
       ),
     );
   }
