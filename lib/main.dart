@@ -22,4 +22,5 @@ import './flutter_27_TabBar/TabBar.dart';
 import './flutter_28_DateTimePicker/DatetimepickerS.dart';
 import './flutter_29_TimePicker/Timepicker.dart';
 import './flutter_30_FFNavigator/FFBottomnavigatorBae.dart';
-void main()=>runApp(FFBottomnavigatorBarS());
+import './flutter_32_RangeSlider/RangeSlider.dart';
+void main()=>runApp(RangeSliderS());
